@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="USA Token on TRON — Gecko price, TronLink wallet, USDT sale" />
+  <title>USA Wallet · MultiCoinBase</title>
+  <link rel="icon" href="https://assets.geckoterminal.com/ge0l871swv8do8ia6696zq3x0iva" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="hero">
+      <img id="heroLogo" src="https://assets.geckoterminal.com/ge0l871swv8do8ia6696zq3x0iva" alt="USA Token" class="hero-logo" width="96" height="96" crossorigin="anonymous" />
+      <h1>USA Token</h1>
+      <p class="tag">TRON Mainnet · MultiCoinBase</p>
+      <p class="contract mono">TKynrUF8Az2RUUjCLWKHqxcMswaNnUnUSa</p>
+      <p id="geckoStatus" class="status"></p>
+    </header>
+
+    <section class="card" id="connectCard">
+      <p class="hint">Abra no <strong>TronLink → DApp Explorer</strong> ou extensão com TronLink.</p>
+      <button type="button" id="btnConnect" class="btn primary">Conectar TronLink</button>
+      <p id="connectStatus" class="status"></p>
+    </section>
+
+    <section class="card hidden" id="walletCard">
+      <div class="row">
+        <span class="label">Carteira</span>
+        <span id="walletAddr" class="mono small"></span>
+      </div>
+      <div class="balances">
+        <div><span class="label">TRX</span><strong id="balTrx">—</strong></div>
+        <div><span class="label">USDT (Tether)</span><strong id="balUsdt">—</strong></div>
+        <div class="usa-row">
+          <img id="usaRowLogo" src="https://assets.geckoterminal.com/ge0l871swv8do8ia6696zq3x0iva" alt="" width="28" height="28" crossorigin="anonymous" />
+          <div><span class="label">USA</span><strong id="balUsa">—</strong></div>
+        </div>
+      </div>
+      <div class="price">
+        <span class="label">Preço pool (Gecko)</span>
+        <strong id="usaPrice">—</strong>
+      </div>
+      <div class="price">
+        <span class="label">Preço USD (Gecko)</span>
+        <strong id="usaPriceUsd">—</strong>
+      </div>
+      <button type="button" id="btnRefresh" class="btn secondary">Atualizar saldos</button>
+    </section>
+
+    <section class="card" id="saleCard">
+      <h2>Comprar USA (Sale)</h2>
+      <p class="hint"><span id="saleQuote">1 USDT → 1000 USA</span> · contrato: <span id="saleAddr" class="mono small">—</span></p>
+      <p id="saleStock" class="hint"></p>
+      <label class="label" for="usdtIn">USDT a pagar (wallet A)</label>
+      <input type="number" id="usdtIn" class="input" value="1" min="0.000001" step="0.01" />
+      <label class="label" for="recipient">Recebedor USA (wallet B)</label>
+      <input type="text" id="recipient" class="input mono" placeholder="T… (vazio = mesma carteira)" />
+      <button type="button" id="btnBuy" class="btn primary">Comprar via USASale</button>
+      <p id="saleStatus" class="status"></p>
+    </section>
+
+    <section class="card">
+      <h2>Adicionar à carteira</h2>
+      <p class="hint">Logo vinda do Gecko quando online.</p>
+      <button type="button" id="btnWatch" class="btn primary">+ Adicionar USA no TronLink</button>
+      <p id="watchStatus" class="status"></p>
+    </section>
+
+    <section class="card links">
+      <a href="https://multicoinbase.com/usa/">Site USA</a>
+      <a href="https://www.geckoterminal.com/tron/pools/TDWfZVJUcjMFAtuTmF2qtNqgHoMpLRNDBk" target="_blank" rel="noopener">GeckoTerminal</a>
+      <a href="https://tronscan.org/#/contract/TKynrUF8Az2RUUjCLWKHqxcMswaNnUnUSa" target="_blank" rel="noopener">TronScan</a>
+    </section>
+
+    <footer>
+      <p>NOT Tether. Official USDT: TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t</p>
+    </footer>
+  </div>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
